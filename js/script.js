@@ -42,9 +42,9 @@ The thumbs list have to be generated with a v-for
 new Vue ({
     el: "#app",
     data: {
-        current_slide: slides[0],
+        current_id: 0,
+        current_slide: slides[this.current_id],
         all_slides: slides,
-        current_id: 0
     },
 
     methods: {
