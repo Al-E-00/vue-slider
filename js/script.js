@@ -27,3 +27,30 @@ const slides = [
 ];
 
 console.log(slides);
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+/* 
+make the slider to work strating from the received html.
+At the clikc on an arrow, the shown img change.
+The thumbs list have to be generated with a v-for
+*/
+
+//inistialize vue js
+
+new Vue ({
+    el: "#app",
+    data: {
+        currentElementIndex: 0,
+        slide: slides,
+        
+    },
+
+    methods: {
+        prev() {
+            this.currentElementIndex + 1
+        }
+    }
+});
+
