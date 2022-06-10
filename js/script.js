@@ -43,7 +43,7 @@ new Vue ({
     el: "#app",
     data: {
         current_id: 0,
-        current_slide: slides[this.current_id],
+        current_slide: slides[0],
         all_slides: slides,
     },
 
