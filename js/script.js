@@ -42,12 +42,24 @@ The thumbs list have to be generated with a v-for
 new Vue ({
     el: "#app",
     data: {
-        currentElementIndex: 0,
-        slide: slides,
-        
+        slide: 'img/01.jpg',
+        newImgId: 01,
     },
 
     methods: {
+        next: function(newImgId){
+            const newImgId = newImgId;
+            this.newImgId += 1;
+        },
+
+        prev: function(newImgId){
+            const newImgId = newImgId;
+            this.newImgId -= 1;
+        },
+        changeImage: function(newImgId) {
+            
+            this.slide = `img/${newImgId}.jpg`,
+        }
     },
 });
 
