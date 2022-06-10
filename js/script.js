@@ -48,9 +48,6 @@ new Vue ({
     },
 
     methods: {
-        prev() {
-            this.currentElementIndex + 1
-        }
-    }
+    },
 });
 
