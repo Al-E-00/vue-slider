@@ -47,19 +47,7 @@ new Vue ({
     },
 
     methods: {
-        next: function(newImgId){
-            const newImgId = newImgId;
-            this.newImgId += 1;
-        },
-
-        prev: function(newImgId){
-            const newImgId = newImgId;
-            this.newImgId -= 1;
-        },
-        changeImage: function(newImgId) {
-            
-            this.slide = `img/${newImgId}.jpg`,
-        }
-    },
+        
+    }
 });
 
