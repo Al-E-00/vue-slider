@@ -51,9 +51,21 @@ new Vue ({
     methods: {
         prev() {
             this.allSlides[this.currentIndex].image;
-            this.currentIndex++;
-
-            if(this.currentIndex == this.allSlides.length){
+            
+            if(this.currentIndex > 0){
+                return this.currentIndex--;
+                
+            } else {
+                this.currentIndex = 4;
+            }
+        },
+        next() {
+            this.allSlides[this.currentIndex].image;
+            
+            if(this.currentIndex < 4){
+                return this.currentIndex++;
+                
+            } else {
                 this.currentIndex = 0;
             }
         }
