@@ -49,25 +49,18 @@ new Vue ({
     },
 
     methods: {
-        prev() {
-            this.allSlides[this.currentIndex].image;
-            
-            if(this.currentIndex > 0){
-                return this.currentIndex--;
-                
-            } else {
-                this.currentIndex = 4;
-            }
-        },
-        next() {
-            this.allSlides[this.currentIndex].image;
-            
-            if(this.currentIndex < 4){
-                return this.currentIndex++;
-                
-            } else {
+        changeActiveImg(direction) {
+        if (direction === "next") {
+            this.currentIndex++;
+            if (this.currentIndex >= this.allSlides.length){
                 this.currentIndex = 0;
             }
+        } else if (direction === "prev") {
+            this.currentIndex--;
+            if (this.currentIndex < 0) {
+                this.currentIndex = 4;
+            }
+        }
         }
     }
 });
